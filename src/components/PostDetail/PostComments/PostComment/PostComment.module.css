@@ -1,0 +1,35 @@
+.postComment {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.postComment h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.commentBody {
+  color: #333;
+}
+
+.commentEmail {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .postComment {
+    background-color: #444;
+  }
+  .postComment h3 {
+    color: #64afff;
+  }
+  .commentBody {
+    color: #f4f4f4;
+  }
+  .commentEmail {
+    color: #aaa;
+  }
+}

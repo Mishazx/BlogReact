@@ -1,0 +1,39 @@
+.postCard {
+  background-color: #eee;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  color: inherit;
+}
+
+.postCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+}
+
+.postCard h1 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.postCard p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .postCard {
+    background-color: #3e3e3e;
+  }
+  .postCard h1 {
+    color: #64afff;
+  }
+  .postCard p {
+    color: #ccc;
+  }
+}

@@ -1,0 +1,21 @@
+.postHeader {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #007bff;
+}
+
+.postHeader h1 {
+  color: #007bff;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .postHeader {
+    border-color: #64afff;
+  }
+  .postHeader h1 {
+    color: #64afff;
+  }
+}
