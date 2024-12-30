@@ -12,6 +12,36 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build and Deploy React app to GitHub Pages
-        uses: omkartapale/react-deployment-gh-pages@v1.0.0
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Print current working directory
+        run: pwd
+
+      - name: Print build directory contents
+        run: ls -la build
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "Mishazx"
+          git config --global user.email "michael.konowalov@mail.ru"
+
+      - name: Add build files to Git
+        run: git --work-tree build add --all
+
+      - name: Commit build files
+        run: |
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+
+      - name: Push to GitHub Pages
+        run: git push origin gh-pages
             
